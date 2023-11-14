@@ -52,9 +52,10 @@ Si decea aplicar esto hagando en los dos codigos.
 
 ## Resultado completo
 Laderboard
+
 ![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/72efeae2-31cd-44b9-8e0e-8e4443ba742e)
 
-
 onInteraction
+
 ![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/a2b7bc79-7e91-43f5-b245-3bcb815608d9)
 
