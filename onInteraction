@@ -1,0 +1,94 @@
+Nota: Siga las indicaciones proporcionadas.
+No muevas nada, cada parte del codigo es escencial para el buen funcionamiento esto solo aplica si no entiendes el codigo.
+
+Prefix: $onInteraction
+
+Codigo:
+$nomention
+$var[variable;leader]
+
+$var[tipo;globalUser]
+
+$var[custom;$customID]
+$var[currency;$getServerVar[currency]]
+
+
+$var[n;1]
+$var[rep;$repeatMessage[10;$repeatMessage[7;a]]]
+$eval[$replaceText[$var[rep];a;
+%{DOL}%if[%{DOL}%getLeaderboardValue[%{DOL}%var[tipo\]\;%{DOL}%var[variable\]\;asc\;%{DOL}%var[n\]\;id\]!=\]
+%{DOL}%var[id\;$trimSpace[$try**%{DOL}%var[n\].** `%{DOL}%username[%{DOL}%getLeaderboardValue[globalUser\;leader\;asc\;%{DOL}%var[n\]\;id\]\]` • %{DOL}%var[currency\]%{DOL}%numberSeparator[%{DOL}%getLeaderboardValue[globalUser\;leader\;asc\;%{DOL}%var[n\]\;value\]\]$url[decode;%0A]%{DOL}%var[id\]$endtry]\]
+%{DOL}%endif
+%{DOL}%var[n\;%{DOL}%sum[%{DOL}%var[n\]\;1\]\]
+;-1]]
+$textSplit[$var[id];$url[decode;%0A]]
+$jsonParse[{"n": ["$joinSplitText[", "]"\]}]
+$jsonArrayReverse[n]
+
+$enableDecimals[true]
+$textSplit[$divide[$jsonArrayCount[n];10];.]
+$var[paginas;$sum[$splitText[1];1]]
+
+
+
+$if[$checkContains[$var[custom];pagina]==true]
+
+$textSplit[$getEmbedData[$channelID;$messageID;1;description];$url[decode;%0A]]
+$textSplit[$splitText[1];.]
+$var[calculate;$replaceText[$splitText[1];**;]]
+$var[s;$sum[$var[calculate];9]]
+
+$textSplit[$getEmbedData[$channelID;$messageID;1;footer];/]
+$textSplit[$splitText[1]; ]
+$footer[Pagina $sum[1;$splitText[2]]/$var[paginas]]
+
+$var[bu;$sum[$splitText[2];1]]
+
+$endif
+
+
+
+$if[$checkContains[$var[custom];anterior]==true]
+
+$textSplit[$getEmbedData[$channelID;$messageID;1;description];$url[decode;%0A]]
+$textSplit[$splitText[1];.]
+$var[calculate;$replaceText[$splitText[1];**;]]
+$var[s;$sub[$var[calculate];11]]
+
+
+$textSplit[$getEmbedData[$channelID;$messageID;1;footer];/]
+$textSplit[$splitText[1]; ]
+$footer[Pagina $replaceText[$sub[1;$splitText[2]];-;]/$var[paginas]]
+
+$endif
+
+$textSplit[$eval[$replaceText[$cropText[$var[rep];10;];a;$trimSpace[
+%{DOL}%json[n\;%{DOL}%var[s\]\]
+%{DOL}%var[s\;%{DOL}%sum[%{DOL}%var[s\]\;1\]\]
+];-1]];$url[decode;%0A]]
+$description[$joinSplitText[]]
+
+
+
+$removeButtons
+$textSplit[$var[custom];-]
+$if[$splitText[2]==]
+$var[split;1]
+$else
+$var[split;$splitText[2]]
+$endif
+
+$if[$sub[$var[s];9]==1]
+$addButton[false;anterior-$sub[1;$var[split]]-$authorID;Anterior Pagina;primary;true;]
+$else
+$addButton[false;anterior-$sub[1;$var[split]]-$authorID;Anterior Pagina;primary;false;]
+$endif
+$if[$var[bu]==$var[paginas]]
+$addButton[false;pagina-$sum[1;$var[split]]-$authorID;Siguiente Pagina;primary;true;]
+$else
+$addButton[false;pagina-$sum[1;$var[split]]-$authorID;Siguiente Pagina;primary;false;]
+$endif
+
+$authorIcon[$serverIcon[$guildID]]]
+$author[$serverName[$guildID] Leaderboard]
+$color[#03a8f4]
