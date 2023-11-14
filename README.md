@@ -7,9 +7,9 @@ Link: https://discord.gg/dru9uRYKqq
 
 ## Variables Necesarias
 
-| Nombre    |     Valor    |
-| --------- | -----------  |
-| currency  |  <un emoji>  |
+|    Nombre   |         Valor       |
+|-------------|---------------------|
+|   currency  |  id stiker o emoji  |
 
 Este codigo lo unico que requiere es una variable de uso de su economia (solo numeros)
 
