@@ -32,3 +32,12 @@ Para que la interacciones de los botones juncionen bien por favor use la guia de
 
 ![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/f8a167fd-2022-43f1-80cd-aaeb39dab5e4)
 
+## Importante este Leadeboard solo muestra hasta 5 paginas
+Esto significa que solo muestra 50 usuarios del leaderboard pero esto se puede cambiar pero el resultado seria el lag (Los botones en ciertas ocasiones no funcionarian)
+
+**Nota:** un $repeatMessage sobre otro hace que se multique el valor repetido
+Ejemplo:
+```python
+$repeatMessage[2;$repeatMessage[5;a]]```
+2 x 5= 10
+Resultado: aaaaaaaaaa
