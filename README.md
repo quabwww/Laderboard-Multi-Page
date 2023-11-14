@@ -13,7 +13,7 @@ Link: https://discord.gg/dru9uRYKqq
 
 Este codigo lo unico que requiere es una variable de uso de su economia (solo numeros)
 
-### Leaderboard 
+### [Leaderboard](https://github.com/quabwww/Laderboard-Multi-Page/blob/main/Laderboard) 
 Por favor para que este codigo funcione siga las indicaciones ala continuacion.
 
 Remplaze el var llamado "variable" por el nombre de su variable de la cual desea usar el leaderboard.
