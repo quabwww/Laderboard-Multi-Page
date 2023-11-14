@@ -9,7 +9,7 @@ Link: https://discord.gg/dru9uRYKqq
 
 |    Nombre   |         Valor       |
 |-------------|---------------------|
-|   currency  |  id stiker o emoji  |
+|   currency  |  un stiker o emoji  |
 
 Este codigo lo unico que requiere es una variable de uso de su economia (solo numeros)
 
