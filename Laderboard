@@ -1,0 +1,44 @@
+Nota: Siga las indicaciones propocionadas.
+
+Prefix: !Leaderboard
+
+Codigo: 
+$nomention
+$var[variable;leader]
+$var[tipo;globalUser]
+$var[custom;$customID]
+$var[currency;$getServerVar[currency]]
+
+
+$var[n;1]
+$var[rep;$repeatMessage[10;$repeatMessage[7;a]]]
+$eval[$replaceText[$var[rep];a;
+%{DOL}%if[%{DOL}%getLeaderboardValue[%{DOL}%var[tipo\]\;%{DOL}%var[variable\]\;asc\;%{DOL}%var[n\]\;id\]!=\]
+%{DOL}%var[id\;$trimSpace[$try**%{DOL}%var[n\].** `%{DOL}%username[%{DOL}%getLeaderboardValue[globalUser\;leader\;asc\;%{DOL}%var[n\]\;id\]\]` • %{DOL}%var[currency\]%{DOL}%numberSeparator[%{DOL}%getLeaderboardValue[globalUser\;leader\;asc\;%{DOL}%var[n\]\;value\]\]$url[decode;%0A]%{DOL}%var[id\]$endtry]\]
+%{DOL}%endif
+%{DOL}%var[n\;%{DOL}%sum[%{DOL}%var[n\]\;1\]\]
+;-1]]
+$textSplit[$var[id];$url[decode;%0A]]
+$jsonParse[{"n": ["$joinSplitText[", "]"\]}]
+$jsonArrayReverse[n]
+
+$var[s;0]
+$description[$eval[$replaceText[$cropText[$var[rep];10;];a;$trimSpace[
+%{DOL}%try%{DOL}%json[n\;%{DOL}%var[s\]\]%{DOL}%endtry
+%{DOL}%var[s\;%{DOL}%sum[%{DOL}%var[s\]\;1\]\]
+];-1]]]
+$enableDecimals[true]
+$textSplit[$divide[$jsonArrayCount[n];10];.]
+$var[paginas;$sum[$splitText[1];1]]
+$footer[Pagina 1/$var[paginas]]
+
+
+$addButton[false;anterior-1-$authorID;Anterior Pagina;primary;true;]
+$if[$json[n;11]!=]
+$addButton[false;pagina-1-$authorID;Siguiente Pagina;primary;false;]
+$else
+$addButton[false;pagina-1-$authorID;Siguiente Pagina;primary;true;]
+$endif
+$authorIcon[$serverIcon[$guildID]]
+$author[$serverName[$guildID] Leaderboard]
+$color[#03a8f4]
