@@ -89,6 +89,6 @@ $else
 $addButton[false;pagina-$sum[1;$var[split]]-$authorID;Siguiente Pagina;primary;false;]
 $endif
 
-$authorIcon[$serverIcon[$guildID]]]
+$authorIcon[$serverIcon[$guildID]]
 $author[$serverName[$guildID] Leaderboard]
 $color[#03a8f4]
