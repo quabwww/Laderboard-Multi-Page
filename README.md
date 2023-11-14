@@ -38,6 +38,6 @@ Esto significa que solo muestra 50 usuarios del leaderboard pero esto se puede c
 **Nota:** un $repeatMessage sobre otro hace que se multique el valor repetido
 Ejemplo:
 ```python
-$repeatMessage[2;$repeatMessage[5;a]]```
+$repeatMessage[2;$repeatMessage[5;a]]
 2 x 5= 10
 Resultado: aaaaaaaaaa
