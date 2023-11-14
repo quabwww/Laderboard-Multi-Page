@@ -47,4 +47,5 @@ Resultado: aaaaaaaaaa
 Ahora aqui es donde la magia ocurre y bota solo 50 usuarios del top pero puede hacer que bote 100 poniendo los dos repeaten "10" entonces 10 x 10 = 100. Entonces leera hasta 100 usuarios pero como dije esto no es recomendable por el lag.
 
 Si decea aplicar esto hagando en los dos codigos.
+
 ![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/9c0f9548-7fb2-447c-993b-2696855cb8d9)
