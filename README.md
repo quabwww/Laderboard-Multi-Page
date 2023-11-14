@@ -27,7 +27,7 @@ Remplaze el var llamado "tipo" segun el tipo de su variable.
 
 ![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/4bf1f4ee-ea7f-415d-9e3a-06acdcfeecd7)
 
-### $onInteraction
+### [$onInteraction](https://github.com/quabwww/Laderboard-Multi-Page/blob/main/onInteraction)
 Para que la interacciones de los botones juncionen bien por favor use la guia de arriba que la explicacion seria la misma.
 
 ![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/f8a167fd-2022-43f1-80cd-aaeb39dab5e4)
