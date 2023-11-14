@@ -37,10 +37,12 @@ Esto significa que solo muestra 50 usuarios del leaderboard pero esto se puede c
 
 **Nota:** un $repeatMessage sobre otro hace que se multique el valor repetido
 Ejemplo:
+
 ```python
 $repeatMessage[2;$repeatMessage[5;a]]
 2 x 5 = 10
 Resultado: aaaaaaaaaa
+```
 
 Ahora aqui es donde la magia ocurre y bota solo 50 usuarios del top pero puede hacer que bote 100 poniendo los dos repeaten "10" entonces 10 x 10 = 100. Entonces leera hasta 100 usuarios pero como dije esto no es recomendable por el lag.
 
