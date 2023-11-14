@@ -49,3 +49,12 @@ Ahora aqui es donde la magia ocurre y bota solo 50 usuarios del top pero puede h
 Si decea aplicar esto hagando en los dos codigos.
 
 ![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/9c0f9548-7fb2-447c-993b-2696855cb8d9)
+
+## Resultado completo
+Laderboard
+![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/72efeae2-31cd-44b9-8e0e-8e4443ba742e)
+
+
+onInteraction
+![image](https://github.com/quabwww/Laderboard-Multi-Page/assets/148601206/a2b7bc79-7e91-43f5-b245-3bcb815608d9)
+
